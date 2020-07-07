@@ -1,0 +1,1 @@
+"use strict";$(".tabs-title li").on("click",function(){$(".tabs-img").stop().animate({left:743*-$(this).index()})}),$(".feature-title1 li").on("click",function(){$(".feature-2-1").stop().animate({left:1400*-$(this).index()})});

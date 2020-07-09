@@ -6,6 +6,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/gouwu.css">
     <link rel="stylesheet" href="../css/reset.css">
+    <script src="../js/jquery-1.12.4.js"></script>
+    <script src="../lib/template-web.js"></script>
 </head>
 <body>
     <div class="header">
@@ -41,15 +43,44 @@
         小米10 全网通版 8GB+128GB 冰海蓝</span> -->
     <!-- </div> -->
         <div class="list-title-2">
-            <div class="list-title-3">
-                 <span>继续购物</span>
-                 <span>共 1 件商品，已选择 1件</span>
-                 <p>合计:</p>
-                 <div class="box"> 
-                 <a class="box1">去结算</a>
-                </div>
-            </div>
+
         </div>
-    </div>
+            
+          
+            <div class="list-title-3">
+                <span>继续购物</span>
+                <span>共 1 件商品，已选择 1件</span>
+                <p>合计:</p>
+                <div class="box"> 
+                <a class="box1">去结算</a>
+               </div> 
+        </div>
+   
+
+    <script type="text/template" id="shoppingCat">
+        {{each json}}
+        <ul>
+            <li>{{$value.product_id}}</li>
+            <li>
+                <img src="../images/25.jpg" alt="">
+                
+               <span> {{$value.product_name}}</span>
+            </li>
+            <li class="dj"><span>{{$value.product_price}}</span></li>
+            <li>
+                <span>
+                    <a href="javascript:void(0)" class="reduce">-</a>
+                    <em class="num">{{$value.product_num}}</em>
+                    <a href="javascript:void(0)" class="add">+</a>
+                </span>
+            </li>
+            <li class="sum"><%=$value.product_num*$value.product_price%></li>
+            <li ><a href="void:0" class="dele">删除</a> </li>
+        </ul>
+         {{/each}} 
+         
+    </script>
+   
 </body>
+<script src="../js/gouwu.js"></script>
 </html>

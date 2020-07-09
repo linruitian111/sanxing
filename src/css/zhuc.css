@@ -93,3 +93,18 @@
     top: 300px;
     cursor: pointer;
 }
+.login{
+    width: 100px;
+    height: 30px;
+    /* border: 1px solid #000; */
+    position: absolute;
+    bottom: 142px;
+    left: 158px;
+
+}
+.login a{
+    line-height: 30px;
+    text-align: center;
+    color: skyblue;
+    
+}

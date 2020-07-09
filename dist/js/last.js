@@ -1,1 +1,1 @@
-"use strict";console.log(111),console.log($(".swiper-wrapper button")),$(".swiper-wrapper #first").on("click",function(){console.log(111),$("swiper-wrapper ul ").stop().animate({top:73*$(this).index()})});
+"use strict";$(".footer-title").click(function(){$.get("../interface/addwq.php",{id:"1",img:"../images/25.jpg",price:13999,name:"Samsung Galaxy Z Flip"},function(e){var i=JSON.parse(e);console.log(e),1==i.code&&alert("添加商品成功")})});
